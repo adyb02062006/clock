@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+</head>
+<body>
+<center><div id="time" style="background: yellow; color: blue;font-size: 45px;font-weight: bold">0</div>
+<button onclick ="stop()"><<img src="99.png" height="225" width="225"/></button>
+<button onclick ="play()"><img src="77.png" height="225" width="225"/></button>
+<button onclick ="pause()"><img src="88.jpg" height="225" width="225"/></button>
+</center>
+<script>
+    function pause() {
+        clearInterval(time)
+    }
+    function stop() {
+        clearInterval(time)
+        i=0
+        document.getElementById('time').innerHTML=0
+    }
+    i = 0
+    time = null
+    function play() {
+        clearInterval(time)
+        time = setInterval(function () {
+            i = i+1
+            document.getElementById('time').innerHTML=i
+        },1000)
+
+    }
+
+</script>
+</body>
+</html>
